@@ -9,4 +9,6 @@ def loop():
         else:
             data = res.json()
             print(data)
- 
+            print(res.status_code)
+            print(word)
+loop()

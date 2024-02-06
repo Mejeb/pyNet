@@ -1,0 +1,24 @@
+from selenum import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chromeservice import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
+# s = Service(ChromeDriverManager().install())
+# driver = webdriver.Chrome(service=s)
+on = True
+while on:
+    def five_seconds():
+        time.sleep(5)
+        cdp = "/Users/HP/Desktop/developper/chromedriver"
+        driver = webdriver.Chrome(executable_path=cdp)
+
+        driver.get = ("www.google.com")
+        driver.quit()
+
+        driver.get("https://www.google.com the amazon url for the price of a drill at 48.99 usd")
+        price = driver.find_element(By.ClassName, "reinventPricePriceToPayMargin")
+        print(price.text)
+        driver.quit()
+        
+    five_seconds
+
